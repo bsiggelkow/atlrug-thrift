@@ -1,4 +1,4 @@
-class Obfuscator
+class MyObfuscator
   class << self
 
     def translate_sentence str
@@ -25,7 +25,7 @@ class Obfuscator
       else
         str # return unchanged
       end
-      capitalized ? result.capitalize! : result 
+      capitalized ? result.capitalize : result 
     end
 
   end
