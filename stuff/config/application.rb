@@ -22,5 +22,9 @@ module Stuff
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Add thrift client lib folder paths
+    config.autoload_paths << Rails.root.join('lib/obfuscator')
+    config.autoload_paths << Rails.root.join('lib/obfuscator/gen-rb')
   end
 end

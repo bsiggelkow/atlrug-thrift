@@ -1,6 +1,3 @@
-$:.push('.')
-$:.push('gen-rb')
-
 require 'thrift'
 require 'obfuscator'
 
@@ -28,17 +25,3 @@ class ObfuscatorClient < Secret::Obfuscator::Client
     @transport.close
   end
 end
-
-# client = ObfuscatorClient.new
-
-# client.open_transport
-# client.ping
-# puts 'ping success'
-
-# result = client.obfuscate 'Hello, world!'
-# puts result
-# client.close_transport
-
-# client.open do |c|
-#   puts c.obfuscate 'Good Evening!'
-# end
